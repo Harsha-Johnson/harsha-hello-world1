@@ -23,7 +23,7 @@ def lambda_handler(event, context):
         file= open(temp_file, "r")
         return {
           'statusCode': 200,
-          'body': file.read("file not created");
+          'body': file.read()
         }
     except botocore.exceptions.ClientError as e:
         if e.response['Error']['Code'] == "404":
